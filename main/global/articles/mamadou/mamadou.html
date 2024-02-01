@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../globals.css" />
+	<link rel="stylesheet" href="../articles.css"/>
+    <link rel="stylesheet" href="mamadoustyle.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../global.html">GLOBAL</a> </li>
+				<li> <a href="../../../national/national.html">NATIONAL</a> </li>
+				<li> <a href="../../../local/local.html">LOCAL</a> </li>
+			</ul>
+			
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="global.html">GLOBAL</a> </li>
+		<li> <a href="national.html">NATIONAL</a> </li>
+		<li> <a href="local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+
+	<div class="mainContent">
+
+		<div class="explorer">
+			<a class="linkButton" href="../../../../main/home/home.html">HOME</a>
+			<div class="separator">></div>
+			<a class="linkButton" href="../../global.html">Global</a>
+			<div class="separator">></div>
+			<div class="linkButton" style="text-decoration: none;">Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru".</div>
+		</div>
+
+		<div class="articleTitle">
+			<h1>Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru".</h1>
+		</div>
+
+		<div class="articleDate">
+			<p>în 26 Mai 2018</p>
+		</div>
+
+
+		<div class="articleGallery">
+			<img src="../../../../resources/mamadou-gassama.png">
+		</div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i');
+		const dropdown = document.querySelector('.dropdownMenu')
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+	
+	</script>
+  </body>
+</html>

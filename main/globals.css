@@ -94,6 +94,7 @@ nav li a:hover {
 	overflow: hidden;
 	
 	transition: width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	z-index: 3000;
 }
 
 .dropdownMenu.open {
