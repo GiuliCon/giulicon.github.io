@@ -1,0 +1,54 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+}
+
+.mainImageDesktop {
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: auto; 
+}
+  
+.mainImageMobile {
+	display: none;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: auto; 
+}
+
+.mainText {
+	position: relative;
+	margin-top: 2rem;
+	margin-left: 7%;
+	margin-right: 7%;
+	
+}
+
+.firstText, .secondText {
+	color: rgba(0, 0, 0, 0.6);
+	text-indent: 3rem;
+	font-size: 25px;
+}
+
+.textTitle {
+	position: relative;
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+}
+
+@media(max-width: 500px) {
+	.mainImageDesktop {
+		display: none;
+	}
+
+	.mainImageMobile {
+		display: block;
+	}
+}

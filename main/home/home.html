@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../globals.css" />
+    <link rel="stylesheet" href="homestyle.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+	<nav>
+		<a href="home.html"> <img class="logo" src="../../resources/logo.png"> <a>
+		<ul>
+			<li> <a href="../global/global.html">GLOBAL</a> </li>
+			<li> <a href="../national/national.html">NATIONAL</a> </li>
+			<li> <a href="../local/local.html">LOCAL</a> </li>
+		</ul>
+		
+		<div class="toggleButton">
+			<i class="fa fa-bars"></i>
+		</div>
+	</nav>
+
+
+	
+
+	<img class="mainImageDesktop" src="../../resources/desktop-main-background.png" id="desktopImage">
+	<img class="mainImageMobile" src="../../resources/mobile-main-background.png" id="mobileImage">
+		
+	<div class="dropdownMenu">
+		<ul>
+			<li> <a href="../global/global.html">GLOBAL</a> </li>
+			<li> <a href="../national/national.html">NATIONAL</a> </li>
+			<li> <a href="../local/local.html">LOCAL</a> </li>
+		<ul>
+	</div>
+	
+	<div class="mainText">
+		<div class="firstText">
+			Toată lumea vorbește despre eroii din filmele de ficțiune, cum ar fii “Spider-Man”, “Batman”, “Captain America” și 
+			lista poate continua, dar, puțini vorbesc despre adevărații eroi, cei care sunt la fel de simpli ca și noi oamenii 
+			de rând, însă aceștia, când a fost momentul, s-au pus pe ei pe locul al doilea și pe primul loc au pus persoane față 
+			de care nu aveau nici o datorie, riscându-și propria viață pentru binele altora.
+		</div>
+		<br><br>
+		<div class="textTitle">
+			Scurtă descriere
+		</div>
+		<br><br>
+		<div class="secondText">
+			Acest proiect a fost făcut pentru a atrage atenția oamenilor asupra gesturilor făcute de unii oameni care în aparență 
+			par oameni simpli, dar în esență ei reprezintă definiția “eroului”. Scopul proiectului este de a aduce lumină asupra 
+			acestui fapt, cu speranța de a da mai multă credință în umanitate și de a reduce nivelul de egoism și ură din această lume.
+		</div>
+	</div>
+
+	
+	
+	
+	
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
+		const dropdown = document.querySelector('.dropdownMenu')
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+	
+	</script>
+  </body>
+</html>
