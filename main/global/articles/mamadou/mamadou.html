@@ -14,7 +14,7 @@
 		<nav>
 			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
 			<ul>
-				<li> <a href="../global.html">GLOBAL</a> </li>
+				<li> <a href="../../global.html">GLOBAL</a> </li>
 				<li> <a href="../../../national/national.html">NATIONAL</a> </li>
 				<li> <a href="../../../local/local.html">LOCAL</a> </li>
 			</ul>
@@ -55,6 +55,61 @@
 		<div class="articleGallery">
 			<img src="../../../../resources/mamadou-gassama.png">
 		</div>
+
+		<p class="mainText">
+			<span style="font-weight: bold;">Mamoudou Gassama</span> (născut la 1 ianuarie 1996 în Yaguine) este un cetățean
+			francez originar din Mali. A devenit cunoscut drept „Omul Păianjen al Parisului” când a salvat un copil agățat de un balcon.
+			<br><br>
+			Intriga poveștii consituie faptul că acesta era un imigrant și stătea ilegal în Paris.
+			<br><br>
+			Pe 26 mai 2018, în arondismentul 18 din Paris , el a salvat un copil de patru ani care nu se putea
+			ține decât cu vârful degetelor pe un balcon. A urcat patru etaje ale unei clădiri înalte în 30 de secunde.
+			Un videoclip al operațiunii de salvare s-a răspândit apoi în întreaga lume cu viteza fulgerului. Incidentul
+			a fost raportat la nivel internațional în numeroase mass-media. Presa i-a dat lui Gassama porecla
+			„Spiderman of Paris” sau „Spider-Man of the 18th” în funcție de cartierul în care a avut loc operațiunea de salvare.
+		</p>
+
+		<br><br>
+
+		<p class="textTitle">
+			Urmări:
+		</p>
+
+		<br>
+		
+		<p class="mainText">
+			Operațiunea de salvare al lui Gassama a primit atenția întregii țări și a fost lăudată. Acesta a fost invitat la Palatul
+			Élysée unde a primit, de la președintele franței, Emmanuel Macron, cetățenie franceză, un certificat și o medalie
+			de aur numită "Médaille d'honneur pour acte de courage et de devouement" pentru actul său de curaj și devotament.
+			<br><br>
+			Acesta a primit, de asemenea o medalie de curaj de la primarul parisului    
+		</p>
+		
+		<br><br>
+
+		<p class="textTitle">
+			Galerie:
+		</p>
+
+		<br><br>
+
+		<div class="slideshow">
+			<div class="mySlide fade">
+				<img src="../../../../resources/mamadou-gassama.png" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/nairobi-incident.jpg" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="dots">
+				<span class="dot", onclick="currentSlide(1)"></span>
+				<span class="dot", onclick="currentSlide(2)"></span>
+			</div>
+		</div>
 	</div>
 	
 	<script>
@@ -68,6 +123,33 @@
 			const isOpen = dropdown.classList.contains('open')
 			
 			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlide");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
 		}
 	
 	</script>
