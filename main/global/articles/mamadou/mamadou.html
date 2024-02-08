@@ -40,11 +40,11 @@
 			<div class="separator">></div>
 			<a class="linkButton" href="../../global.html">Global</a>
 			<div class="separator">></div>
-			<div class="linkButton" style="text-decoration: none;">Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru".</div>
+			<div class="linkButton" style="text-decoration: none;">Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru"</div>
 		</div>
 
 		<div class="articleTitle">
-			<h1>Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru".</h1>
+			<h1>Mamadou Gassama, salvatorul din Paris poreclit "Spiderman negru"</h1>
 		</div>
 
 		<div class="articleDate">
@@ -53,7 +53,7 @@
 
 
 		<div class="articleGallery">
-			<img src="../../../../resources/mamadou-gassama.png">
+			<img src="../../../../resources/mamadou/mamadou-gassama.png">
 		</div>
 
 		<p class="mainText">
@@ -82,7 +82,8 @@
 			Élysée unde a primit, de la președintele franței, Emmanuel Macron, cetățenie franceză, un certificat și o medalie
 			de aur numită "Médaille d'honneur pour acte de courage et de devouement" pentru actul său de curaj și devotament.
 			<br><br>
-			Acesta a primit, de asemenea o medalie de curaj de la primarul parisului    
+			Acesta a primit, de asemenea o medalie de curaj de la primarul parisului și a primit premiul "Bet Humanitarian Award",
+			acordat de către Black Entertainment Television, un post de televiziune din America.   
 		</p>
 		
 		<br><br>
@@ -95,11 +96,21 @@
 
 		<div class="slideshow">
 			<div class="mySlide fade">
-				<img src="../../../../resources/mamadou-gassama.png" style="width: 100%">
+				<video width="1000" controls>
+					<source src="../../../../resources/mamadou/mamadou-video.mp4" type="video/mp4">
+				</video>
 			</div>
 
 			<div class="mySlide fade">
-				<img src="../../../../resources/nairobi-incident.jpg" style="width: 100%">
+				<img src="../../../../resources/mamadou/mamadou-president.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/mamadou/mamadou-firefighters.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/mamadou/mamadou-premiu.jpeg" style="width: 100%">
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -108,15 +119,20 @@
 			<div class="dots">
 				<span class="dot", onclick="currentSlide(1)"></span>
 				<span class="dot", onclick="currentSlide(2)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
 			</div>
 		</div>
+
+		<div class="end"></div>
 	</div>
 	
 	<script>
 	
 		const toggleBtn = document.querySelector('.toggleButton')
-		const toggleBtnIcon = document.querySelector('.toggleButton i');
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
 		const dropdown = document.querySelector('.dropdownMenu')
+
 		toggleBtn.onclick = function () {
 			dropdown.classList.toggle('open')
 			
@@ -137,19 +153,27 @@
 		}
 
 		function showSlides(n) {
-		let i;
-		let slides = document.getElementsByClassName("mySlide");
-		let dots = document.getElementsByClassName("dot");
-		if (n > slides.length) {slideIndex = 1}    
-		if (n < 1) {slideIndex = slides.length}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		}
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";  
-		dots[slideIndex-1].className += " active";
+			let i;
+			let slides = document.getElementsByClassName("mySlide");
+			let dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}    
+
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
 		}
 	
 	</script>

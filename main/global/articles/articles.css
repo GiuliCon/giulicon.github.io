@@ -6,6 +6,7 @@
 
 .mainContent {
     padding: 0 2%;
+    padding-bottom: 5%;
 }
 
 .explorer {
@@ -76,8 +77,8 @@
 }
 
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation-name: fade;  
+    animation-duration: 0.5s;
 }
   
 @keyframes fade {
@@ -137,6 +138,7 @@
 .active, .dot:hover {
     background-color: #717171;
 }
+
 @media (max-width: 840px) {
 	.explorer {
         display: none;
