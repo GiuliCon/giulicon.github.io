@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../globals.css" />
+    <link rel="stylesheet" href="nationalstyle.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../home/home.html"> <img class="logo" src="../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../global/global.html">GLOBAL</a> </li>
+				<li> <a href="national.html">NATIONAL</a> </li>
+				<li> <a href="../local/local.html">LOCAL</a> </li>
+			</ul>
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="../global/global.html">GLOBAL</a> </li>
+		<li> <a href="national.html">NATIONAL</a> </li>
+		<li> <a href="../local/local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+	
+	<div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem">
+		<div class="mainText">Eroi la nivel național</div>
+	</div>
+
+	<div class="showDesktop">
+		<div class="responsive">
+			<a href="nationalArticles/mariancr/mariancr.html">
+				<img src="../../resources/mariancr/marian-catalin.jpg">
+				<div class="caption">
+					<div class="cardTitle">Om căzut în canalul de colectare a apei</div>
+					<div class="cardName">Marian Cătălin Rădoacă</div>
+				</div>
+			</a>
+		</div>
+		<div class="responsive">
+			<a href="nationalArticles/dacian/dacian.html">
+				<img src="../../resources/dacian/dacian.jpg">
+				<div class="caption">
+					<div class="cardTitle">Dublu Erou</div>
+					<div class="cardName">Dacian Ciuculan</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="showDesktop">
+		<div class="responsive">
+			<a href="nationalArticles/liviu/liviu.html">
+				<img src="../../resources/liviu/liviu.jpg">
+				<div class="caption">
+					<div class="cardTitle">Șofer de autobuz full-time, erou part-time</div>
+					<div class="cardName">Liviu Apostol</div>
+				</div>
+			</a>
+		</div>
+	
+	</div>
+
+	<div class="showMobile">
+		<div class="responsive">
+			<a href="nationalArticles/mariancr/mariancr.html">
+				<img src="../../resources/mariancr/marian-catalin.jpg">
+				<div class="caption">
+					<div class="cardTitle">Om căzut în canalul de colectare a apei</div>
+					<div class="cardName">Marian Cătălin Rădoacă</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="showMobile">
+		<div class="responsive">
+			<a href="nationalArticles/dacian/dacian.html">
+				<img src="../../resources/dacian/dacian.jpg">
+				<div class="caption">
+					<div class="cardTitle">Dublu Erou</div>
+					<div class="cardName">Dacian Ciuculan</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="showMobile">
+		<div class="responsive">
+			<a href="nationalArticles/liviu/liviu.html">
+				<img src="../../resources/liviu/liviu.jpg">
+				<div class="caption">
+					<div class="cardTitle">Șofer de autobuz full-time, erou part-time</div>
+					<div class="cardName">Liviu Apostol</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i');
+		const dropdown = document.querySelector('.dropdownMenu')
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+	
+	</script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../globals.css" />
+	<link rel="stylesheet" href="../nationalArticles.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+				<li> <a href="../../national.html">NATIONAL</a> </li>
+				<li> <a href="../../../local/local.html">LOCAL</a> </li>
+			</ul>
+			
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+		<li> <a href="../../national.html">NATIONAL</a> </li>
+		<li> <a href="../../../local/local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+
+	<div class="mainContent">
+
+		<div class="explorer">
+			<a class="linkButton" href="../../../../main/home/home.html">HOME</a>
+			<div class="separator">></div>
+			<a class="linkButton" href="../../../national/national.html">National</a>
+			<div class="separator">></div>
+			<div class="linkButton" style="text-decoration: none;">Dacian Ciuculan, multiplu erou din Giurgiu.</div>
+		</div>
+
+		<div class="articleTitle">
+			<h1>Dacian Ciuculan, multiplu erou din Giurgiu.</h1>
+		</div>
+
+		<div class="articleDate">
+			<p>în 24 Decembrie 2023</p>
+		</div>
+
+
+		<div class="articleGallery">
+			<img src="../../../../resources/dacian/dacian.jpg">
+		</div>
+
+		<p class="mainText">
+			Polițistul <span style="font-weight: bold;">Dacian Ciuculan</span>, agent șef de poliție din cadrul Biroului
+            Rutier Giurgiu s-a făcut remarcat de două ori deja prin gesturile sale eroice
+            <br><br>
+            Prima acțiune a avut loc în data de 14 Ianuarie 2023, când o garsonieră a explodat, rezultând un incendiu, fără să
+            stea pe gânduri, polițistul aflat în timpul serviciului a intrat pe fereaastră în garsoniera cuprinsă de flăcări
+            și a salvat un bărbat în vârstă de 68 de ani.
+			<br><br>
+            Cea de-a doua acțiune a avut loc în 23 Decembrie 2023. Șoferul unui taxi ce transporta o doamnă aflată în travaliu
+            a solicitat sprijinul a doi polițiști aflați pe marginea drumului, aceștia erau protagonistul nostru Dacian Ciuculan
+            și colegul său agentul principal Cristian Bechir, cei doi au urcat rapid în autospeciala de poliţie şi au decis să
+            escorteze taxiul până la maternitate, asigurându-se că toţi pasagerii au ajuns cu bine la destinaţie.
+            <br><br>
+            Autospeciala de poliţie a dirijat traficul din mers, reuşind cu brio să ajungă rapid la Maternitatea Spitalului Judeţean de Urgenţă.
+			
+            
+			<br><br>
+		</p>
+
+		<br><br><br><br><br><br>
+
+		<p class="textTitle">
+			Galerie:
+		</p>
+
+		<br><br>
+
+		<div class="slideshow">
+			<div class="mySlide fade">
+				<img src="../../../../resources/dacian/cei-doi.webp" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/dacian/dacian.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/dacian/masina.webp" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="dots">
+				<span class="dot", onclick="currentSlide(1)"></span>
+				<span class="dot", onclick="currentSlide(2)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+			</div>
+		</div>
+
+		<div class="end"></div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
+		const dropdown = document.querySelector('.dropdownMenu')
+
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName("mySlide");
+			let dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}    
+
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}
+	
+	</script>
+  </body>
+</html>

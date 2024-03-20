@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+
+
+.mainContent {
+    padding: 0 2%;
+    padding-bottom: 5%;
+}
+
+.explorer {
+    display: flex;
+    font-size: 1.25rem;
+    color: black;
+
+    margin-top: 2rem;
+}
+
+.linkButton {
+    text-decoration: underline;
+    color: black;
+    user-select: none;
+}
+
+.separator {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.articleTitle {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bold;
+    font-size: 3.2rem;
+
+    letter-spacing: -1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.articleDate {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.articleGallery {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 2%;
+}
+
+.articleGallery img{
+    width: 100%;
+    height: auto;
+}
+
+.mainText {
+    font-size: 1.7rem;
+}
+
+.textTitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;  
+    animation-duration: 0.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    padding: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    bottom: 7.5px;
+}
+
+.dot {
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+@media (max-width: 840px) {
+	.explorer {
+        display: none;
+    }
+
+    .articleGallery {
+        width: 90%;
+        float:none;
+        margin-left: 5%;
+        margin-bottom: 1rem;
+    }
+
+    .mainText {
+        font-size: 1.2rem;
+    }
+
+    .textTitle {
+        font-size: 1.5rem;
+    }
+}

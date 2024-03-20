@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../globals.css" />
+	<link rel="stylesheet" href="../articles.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../../global.html">GLOBAL</a> </li>
+				<li> <a href="../../../national/national.html">NATIONAL</a> </li>
+				<li> <a href="../../../local/local.html">LOCAL</a> </li>
+			</ul>
+			
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="global.html">GLOBAL</a> </li>
+		<li> <a href="national.html">NATIONAL</a> </li>
+		<li> <a href="local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+
+	<div class="mainContent">
+
+		<div class="explorer">
+			<a class="linkButton" href="../../../../main/home/home.html">HOME</a>
+			<div class="separator">></div>
+			<a class="linkButton" href="../../global.html">Global</a>
+			<div class="separator">></div>
+			<div class="linkButton" style="text-decoration: none;">James Shaw Jr., de la electrician la erou.</div>
+		</div>
+
+		<div class="articleTitle">
+			<h1>James Shaw Jr., de la electrician la erou.</h1>
+		</div>
+
+		<div class="articleDate">
+			<p>în 22 Aprilie 2018</p>
+		</div>
+
+
+		<div class="articleGallery">
+			<img src="../../../../resources/craighead/nairobi-incident.jpg">
+		</div>
+
+		<p class="mainText">
+			<span style="font-weight: bold;">James Shaw Jr.</span>(născut în Nashville, Tennessee, SUA), a absolvit facultatea de
+            inginerie din cadrul universității de Stat Tennessee și lucrează ca și tehnician electric la AT&T (American Telephone
+            and Telegraph Company).
+            <br><br>
+            Shaw și prietenul său se aflau la Waffle House, care este un restaurant specializat în gofre. După aproximativ jumătate
+            de oră a auzit o bubuitură și un geam cum se sparge, însă acesta a crezut că cineva a spart niște vase, dar după o scurtă
+            rafală acesta și-a dat seama ce se întâmplă, iar el și prietenul său McMurry au fugit către toaletă. Ajunși acolo, Shaw
+            și-a dat seama că nu poate încuia baia, iar agresorul a tras înspre el, unul din gloanțe reușind să îl zgârie în antebraț.
+            Acesta a înțeles gravitatea situției, iar în momentul în care trăgătorul a îndreptat arma în jos pentru a o reîncărca, Fără
+            să mai stea pe gânduri, Shaw a sărit pe trăgător, a reușit să îi îndepărteze arma iar acesta a fugit.
+			<br><br>
+			
+		</p>
+
+		<br><br>
+
+		<p class="textTitle">
+			Urmări:
+		</p>
+
+		<br>
+		
+		<p class="mainText">
+
+            În urma atacului, 4 persoane au murit (Akilah DaSilva, DeEbony Groves, Joe Perez and Taurean Sanderlin),
+            însă, dacă Shaw nu ar fi intervenit, numărul ar fi fost mult mai mare. Trăgătorul a fost prins a doua zi în urma unei
+            alerte de căutare generală. În caz că gestul de salvare nu ar fi fost destul, acesta a creat un cont de donații,
+            pentru a strânge bani de care familiile celor 4 decedați să se poată folosi pentru a trece peste această tragedie mai
+            ușor din punct de vedere financiar. Donațiile strânse de către Shaw au depășit suma de 200,000 de dolari.
+			<br><br>
+            Deși toată lumea, inclusiv autoritățiile îl descriu ca pe un erou, acesta a afirmat: "Am făcut-o din pur egoism. O
+            făceam doar pentru a mă salva pe mine, dar prin asta am salvat și alte persoane." (text tradus din limba Engleză).
+		</p>
+		
+		<br><br>
+
+		<p class="textTitle">
+			Galerie:
+		</p>
+
+		<br><br>
+
+		<div class="slideshow">
+			<div class="mySlide fade">
+				<video width="1000" controls>
+					<source src="../../../../resources/jshaw/Waffle House hero caught on camera.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/jshaw/waffle-shooting.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/jshaw/nash-victims.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/jshaw/james-shaw.jpg" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="dots">
+				<span class="dot", onclick="currentSlide(1)"></span>
+				<span class="dot", onclick="currentSlide(2)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+			</div>
+		</div>
+
+		<div class="end"></div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
+		const dropdown = document.querySelector('.dropdownMenu')
+
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName("mySlide");
+			let dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}    
+
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}
+	
+	</script>
+  </body>
+</html>

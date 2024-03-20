@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../globals.css" />
+	<link rel="stylesheet" href="../nationalArticles.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+				<li> <a href="../../national.html">NATIONAL</a> </li>
+				<li> <a href="../../../local/local.html">LOCAL</a> </li>
+			</ul>
+			
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+		<li> <a href="../../national.html">NATIONAL</a> </li>
+		<li> <a href="../../../local/local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+
+	<div class="mainContent">
+
+		<div class="explorer">
+			<a class="linkButton" href="../../../../main/home/home.html">HOME</a>
+			<div class="separator">></div>
+			<a class="linkButton" href="../../../national/national.html">National</a>
+			<div class="separator">></div>
+			<div class="linkButton" style="text-decoration: none;">Liviu Apostol, șoferul de autobuz erou la Constanța.</div>
+		</div>
+
+		<div class="articleTitle">
+			<h1>Liviu Apostol, șoferul de autobuz erou la Constanța.</h1>
+		</div>
+
+		<div class="articleDate">
+			<p>în 7 Martie 2024</p>
+		</div>
+
+
+		<div class="articleGallery">
+			<img src="../../../../resources/liviu/liviu.jpg">
+		</div>
+
+		<p class="mainText">
+			<span style="font-weight: bold;">Liviu Apostol</span>, în vârstă de 54 de ani este șofer de autobuz în Constanța,
+			acesta a fost plutonier major într-o unitate din Constanța din cadrul Forțelor Navale, până a ieșit la pensie acum
+			7 ani.
+            <br><br>
+            Era în cursă, când a observat pe trotuar cum un bărbat a căzut ca secerat din picioare, iar femeia de lângă s-a
+			alarmat și a început să strige după ajutor. Cu promptitudine, șoferul a oprit autobuzul plin de călători și
+			a sărit în ajutorul celui căzut la pământ. Experiența de militar l-a determinat să se concentreze, să rămână calm
+			și să îi ofere corect primul ajutor. L-a așezat pe bărbatul inconștient în poziție dreaptă, cu fața în sus și i-a
+			făcut masaj cardiac. Între timp, cineva sunase la 112.
+			<br><br>
+            În cele din urmă, bărbatul a deschis ochii şi a început să respire, fiind transportat la spital de către o
+			ambulanţă, conştient şi cooperant. Şoferul de autobuz s-a întors la volan şi i-a dus în continuare pe pasageri
+			pe traseu. Liviu Apostol a fost numit de mulţi erou pentru gestul său, însă el nu este acord, spunându-le,
+			vineri, jurnaliştilor, că există mulţi oameni în România care ar fi făcut la fel:
+            <br><br>
+            “Eroi… Am auzit cuvântul acesta "erou" în aceste două zile încât aproape a început să… sau în capul meu a
+			devenit ceva spre banalitate. Avem aşa de mulţi eroi în ţara asta încât faptul că unul s-a dat jos şi i-a
+			apăsat pe piept unui cetăţean şi şi-a revenit este ceva, cum spuneam, banal”, a declarat el.
+            
+			<br><br>
+		</p>
+
+		<br><br><br><br><br><br>
+
+		<p class="textTitle">
+			Galerie:
+		</p>
+
+		<br><br>
+
+		<div class="slideshow">
+			<div class="mySlide fade">
+				<video width="1000" controls>
+					<source src="../../../../resources/liviu/liviu-video.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/liviu/liviu.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/liviu/liviu-arm.jpg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/liviu/liviu-bus.webp" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="dots">
+				<span class="dot", onclick="currentSlide(1)"></span>
+				<span class="dot", onclick="currentSlide(2)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+				<span class="dot", onclick="currentSlide(4)"></span>
+			</div>
+		</div>
+
+		<div class="end"></div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
+		const dropdown = document.querySelector('.dropdownMenu')
+
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName("mySlide");
+			let dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}    
+
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}
+	
+	</script>
+  </body>
+</html>

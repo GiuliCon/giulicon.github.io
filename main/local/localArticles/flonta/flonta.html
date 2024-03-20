@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../globals.css" />
+	<link rel="stylesheet" href="../localArticles.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script src="https://kit.fontawesome.com/28742fc4ae.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+		<nav>
+			<a href="../../home/home.html"> <img class="logo" src="../../../../resources/logo.png"> <a>
+			<ul>
+				<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+				<li> <a href="../../../national/national.html">NATIONAL</a> </li>
+				<li> <a href="../../local.html">LOCAL</a> </li>
+			</ul>
+			
+			<div class="toggleButton">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="dropdownMenu">
+	<ul>
+		<li> <a href="../../../global/global.html">GLOBAL</a> </li>
+		<li> <a href="../../../national/national.html">NATIONAL</a> </li>
+		<li> <a href="../../local.html">LOCAL</a> </li>
+	<ul>
+	</div>
+
+	<div class="mainContent">
+
+		<div class="explorer">
+			<a class="linkButton" href="../../../../main/home/home.html">HOME</a>
+			<div class="separator">></div>
+			<a class="linkButton" href="../../../local/local.html">Local</a>
+			<div class="separator">></div>
+			<div class="linkButton" style="text-decoration: none;">Cristian Flonta, polițistul erou din Arad.</div>
+		</div>
+
+		<div class="articleTitle">
+			<h1>Cristian Flonta, polițistul erou din Arad.</h1>
+		</div>
+
+		<div class="articleDate">
+			<p>în 21 August 2022</p>
+		</div>
+
+
+		<div class="articleGallery">
+			<img src="../../../../resources/flonta/pod-flonta.jpg">
+		</div>
+
+		<p class="mainText">
+			Polițistul <span style="font-weight: bold;">Cristian Flonta</span>, Agent Șef Principal în cadrul Serviciului
+            pentru Acțiuni Speciale Arad a intervenit pentru a salva un bărbat care intenționa să se arunce de pe un pod
+            din municipiul Arad.
+			<br><br>
+            „Duminică, la ora 23.30, ploua torential, iar colegii de la Serviciul pentru Acțiuni Speciale Arad se aflau în
+            serviciul de patrulare, când, deodată, au recepționat prin stație un apel venit pe 112, o persoana amenința că
+            se aruncă de pe un pod aflat la numai 5 minute distanță“, a transmis IPJ Arad.
+            <br><br>
+            Polițiștii s-au deplasat de urgență și au fost primii care au ajuns la Podul Traian, unde au găsit un bărbat
+            care se afla atârnat de pod. „Colegul nostru de la Serviciul pentru Acțiuni Speciale, agent șef principal
+            Cristian Flonta s-a apropiat încet de acesta, iar după mai multe discuții l-a convins ca viata merita
+            trăită indiferent de greutăți. Bărbatul a coborât, fiind preluat de echipajul medical sosit la fata locului.
+            Totodată, acesta i-a mulțumit colegului nostru, părându-i rău că s-a lăsat copleșit de probleme și pentru o
+            clipa si-a pierdut cumpătul.Felicitări colegului nostru pentru promptitudinea și spiritul de care a dat dovada
+            evitând astfel producerea unei tragedii“, se arată într-o informare remisă de Inspectoratul de Poliție al
+            Județului Arad.
+		</p>
+
+		<br><br><br><br><br><br>
+
+		<p class="textTitle">
+			Galerie:
+		</p>
+
+		<br><br>
+
+		<div class="slideshow">
+			<div class="mySlide fade">
+				<img src="../../../../resources/flonta/cristi-flonta.jpeg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/flonta/flonta-close.jpeg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/flonta/flonta.jpeg" style="width: 100%">
+			</div>
+
+			<div class="mySlide fade">
+				<img src="../../../../resources/flonta/pod-flonta.jpg" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="dots">
+				<span class="dot", onclick="currentSlide(1)"></span>
+				<span class="dot", onclick="currentSlide(2)"></span>
+				<span class="dot", onclick="currentSlide(3)"></span>
+				<span class="dot", onclick="currentSlide(4)"></span>
+			</div>
+		</div>
+
+		<div class="end"></div>
+	</div>
+	
+	<script>
+	
+		const toggleBtn = document.querySelector('.toggleButton')
+		const toggleBtnIcon = document.querySelector('.toggleButton i')
+		const dropdown = document.querySelector('.dropdownMenu')
+
+		toggleBtn.onclick = function () {
+			dropdown.classList.toggle('open')
+			
+			const isOpen = dropdown.classList.contains('open')
+			
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
+		}
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName("mySlide");
+			let dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}    
+
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}
+	
+	</script>
+  </body>
+</html>
