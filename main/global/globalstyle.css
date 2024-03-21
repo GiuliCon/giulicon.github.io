@@ -88,6 +88,19 @@ body {
 	height: 5%;
 }
 
+.mainText {
+	position: relative;
+	margin-top: 2rem;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.firstText, .secondText {
+	color: rgba(0, 0, 0, 0.6);
+	text-indent: 3rem;
+	font-size: 20px;
+}
+
 
 
 @media (max-width: 840px) {

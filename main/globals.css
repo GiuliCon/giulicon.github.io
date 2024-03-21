@@ -120,6 +120,18 @@ nav li a:hover {
 	filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
 
 @media (max-width: 840px) {
   nav ul {
